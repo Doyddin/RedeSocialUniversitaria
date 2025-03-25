@@ -1,0 +1,6 @@
+@RedeSocialUniversitariaAPI_HostAddress = http://localhost:5088
+
+GET {{RedeSocialUniversitariaAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
