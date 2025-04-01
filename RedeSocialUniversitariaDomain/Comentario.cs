@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace RedeSocialUniversitariaDomain
 {
-    public class Postagem
+    public class Comentario
     {
         [Key]
         public Guid Id { get; set; }
-        public Guid AutorId { get; set; }
-        public Usuario Autor { get; set; }
+        [Required]
         public string Conteudo { get; set; }
-        public DateTime DataHora { get; set; }
-        public List<Comentario> Comentarios { get; set; } = new();
-        public List<Usuario>? Curtidas { get; set; } = new();
+        public Guid PostagemId { get; set; }
+        public Guid UsuarioId { get; set; }
+        public Usuario Usuario { get; set; }
+        public Postagem Postagem { get; set; }
     }
 }

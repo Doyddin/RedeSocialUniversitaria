@@ -44,7 +44,7 @@ namespace RedeSocialUniversitariaInfra.Repository
         }
         public void updateUsuario(int id, Usuario usuario)
         {
-            if (id == usuario.IdUsuario)
+            if (id == usuario.Id)
             {
                 _dbContext.Usuarios.Update(usuario);
                 _dbContext.SaveChanges();

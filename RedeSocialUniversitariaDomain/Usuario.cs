@@ -5,15 +5,12 @@ namespace RedeSocialUniversitariaDomain
     public class Usuario
     {
         [Key]
-        public int IdUsuario { get; set; }
-        
+        public Guid Id { get; set; }
         public string Nome { get; set; }
         [EmailAddress]
         public string Email { get; set; }
-        public List<Usuario> Seguidores { get; set; }
-        public Usuario()
-        {
-            Seguidores = new List<Usuario>();
-        }
+        public List<Usuario> Seguidores { get; set; } = new();
+        public List<Comentario> Comentarios { get; set; } = new();
+        public List<Postagem> Curtidas { get; set; } = new();
     }
 }
